@@ -1,0 +1,24 @@
+//bir olculu massivde vuma toplama min max
+#include <iostream>
+using namespace std;
+void analysis( int arr[],int size);
+int main(){
+    int array[5]={11,12,13,15,17};
+    analysis(array,  5);
+}
+void analysis(int arr[], int size){
+    int sum=0;
+    int product=1;
+    int max=arr[0];
+    int min=arr[0];
+    for (int i=0; i<size;i++){
+        sum+=arr[i];
+        product*=arr[i];
+        if (arr[i]>max) max=arr[i];
+        if (arr[i]<min) min=arr[i];
+    }
+    cout<<"sum"<<sum<<endl;
+    cout<<"product"<<product<<endl;
+    cout<<"max"<<max<<endl;
+    cout<<"min"<<min<<endl;
+}
