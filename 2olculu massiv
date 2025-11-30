@@ -1,0 +1,28 @@
+//iki olculu massivde vuma toplama min max
+#include <iostream>
+using namespace std;
+void analysis(int arr[][4],int rows,int cols);
+int main(){
+    int matrix[2][4]={
+        {4,7,6,9},
+        {1,8,4,3}};
+       analysis(matrix,2,4);
+} 
+void analysis(int arr[][4],int rows,int cols){
+    int sum=0;
+    int product=1;
+    int max=arr[0][0];
+    int min=arr[0][0];
+    for (int i=0;i<rows;i++){
+        for(int j=0;j<cols;j++){
+            sum+=arr[i][j];
+            product*=arr[i][j];
+            if (arr[i][j]>max) max=arr[i][j];
+            if (arr[i][j]<min) min=arr[i][j];
+        }
+    }
+    cout<<"sum"<<sum<<endl;
+    cout<<"product"<<product<<endl;
+    cout<<"max"<<max<<endl;
+    cout<<"min"<<min<<endl;
+}
